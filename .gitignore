@@ -1,0 +1,6 @@
+.vercel
+.env
+node_modules
+*.lock
+.vscode/
+coverage

@@ -1,0 +1,16 @@
+{
+  "name": "devenv",
+  "version": "1.0.0",
+  "description": "quick shell builder ",
+  "main": "index.js",
+  "repository": "https://github.com/sequncee/devenv",
+  "author": "legiorange <legiorange@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "prettier": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
