@@ -1,19 +1,14 @@
-{
-    "Platform":[
-        "Centos",
-        "Ubuntu",
-        "Debian"
-    ],
+{   "Panel":[{"title":"Platform","body":["Centos","Ubuntu","Debian"]},
+{"title":"Web_Server","body":["Apache","NGINX"]},
+{"title":"Database","body":["Mysql","MariaDB","Oracle"]},
+{"title":"Docker","body":["Docker"]}
+
+],
     "OSversion":{
         "CentOS":["6","7","8"],
         "Ubuntu":["14.04","16.04","18.04","20.04"],
         "Debian":["8","9","10"]
     },
-    "Package":["yum","apt","apt"],
-    "Database":{
-        
-    },
-    "Web_Server":["Apache","NGINX"],
-    "Docker":{}
+    "Package":["yum","apt","apt"]
 
 }
