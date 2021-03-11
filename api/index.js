@@ -3,12 +3,21 @@ const {
   start,
   banner,
 } = require("../src/common/builder");
-
-
+const {
+  parseBoolean,
+  parseArray,
+  clampValue,
+  CONSTANTS,
+} = require("../src/common/utils");
+const {
+  dockerBuilder,
+} = require("../src/common/dockerBuilder");
 module.exports = async (req, res) => {
     const {
-    platform,
-    platformversion,
+    OS,    // linux系统
+    osVersion,   // 系统版本
+    version, //DEVversion
+    docker,  //docker
   } = req.query;
   // res.json({
   //   body: req.body,
@@ -17,11 +26,24 @@ module.exports = async (req, res) => {
   // }) 
   // 返回raw
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  var Payload =start()+banner(OS,osVersion,version);
   // const shell =start.arguments+banner
-  console.log(platform);
-  res.send(start()+banner())
+  //  --Start Testing --
+  // TODO::::判断空返回异常
+  // console.log(OS);
+    // if (OS!=1) {
+  //   return res.send("OS not found");
+  // }
+  //  --End Testing --
+  // Docker
+  if (docker==1) {
+    Payload+=dockerBuilder()
+  }
+
+  res.send(Payload)
 
 }
+
 // module.exports = async (req, res) => {
 
 //   let stats;

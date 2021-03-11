@@ -2,10 +2,10 @@ function start() {
     return "#!/bin/bash"
 }
 
-function banner(platform,osVersion,version) {
+function banner(OS,osVersion,version) {
     return `
 # --------------------------------------------------------------
-#	OS:      ${platform} ${osVersion}
+#	OS:      ${OS} ${osVersion}
 #	Project: Devenv
 #	Ver:     ${version}
 #	Author:  Secunce E Infra(Legiorange)

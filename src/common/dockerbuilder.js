@@ -1,14 +1,10 @@
-// docker 在最后一位
+// // docker 在最后一位
+function dockerBuilder() {
+    return "curl -sS https://get.docker.com/ | sh";
+}
+module.exports = {
+
+    dockerBuilder
+}
 
 
-curl -sS https://get.docker.com/ | sh
-
-
-python 
-
-sudo apt install python3-dev python3-pip python3-setuptools -y
-
-openjdk http://openjdk.java.net/install/
-
-nodejs
-https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
